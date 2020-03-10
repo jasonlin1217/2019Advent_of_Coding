@@ -2,10 +2,6 @@ import java.io.*;
 import java.util.* ; 
 
 public class Day1p1 {
-	/*
-	Not sure what proper input is so I'm just gonna use
-	an arraylist of modules.
-	*/
 
 	private static int fuelCalc(int mass){
 		int value = mass/3 - 2;
