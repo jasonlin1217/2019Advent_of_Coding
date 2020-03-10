@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.* ; 
 
-public class Day1 {
+public class Day1p1 {
 	/*
 	Not sure what proper input is so I'm just gonna use
 	an arraylist of modules.
