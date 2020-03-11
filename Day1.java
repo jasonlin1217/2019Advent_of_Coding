@@ -28,6 +28,7 @@ public class Day1 {
 		while(sc.hasNext()){
 			iFile.add(sc.nextInt());
 		}
+		sc.close();
 		System.out.println(totalFuel(iFile));
 	}
 

@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Day1<2019Advent_of_Coding_9f9cfb65>",
+            "request": "launch",
+            "mainClass": "Day1",
+            "projectName": "2019Advent_of_Coding_9f9cfb65"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Day1p1<2019Advent_of_Coding_9f9cfb65>",
+            "request": "launch",
+            "mainClass": "Day1p1",
+            "projectName": "2019Advent_of_Coding_9f9cfb65"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Day1p2<2019Advent_of_Coding_9f9cfb65>",
+            "request": "launch",
+            "mainClass": "Day1p2",
+            "projectName": "2019Advent_of_Coding_9f9cfb65"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Day2<2019Advent_of_Coding_9f9cfb65>",
+            "request": "launch",
+            "mainClass": "Day2",
+            "projectName": "2019Advent_of_Coding_9f9cfb65"
+        }
+    ]
+}

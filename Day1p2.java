@@ -30,7 +30,8 @@ public class Day1p2 {
 		Scanner sc = new Scanner(input);
 		while(sc.hasNext()){
 			iFile.add(sc.nextInt());
-		}
+        }
+        sc.close();
 		System.out.println(totalFuel(iFile));
 	}
 

@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Day2 {
+public class Day2p1 {
 
 	/*
 	Not sure what proper input is so I'm assuming input is an string
