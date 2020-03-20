@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Day3p1 {
@@ -18,52 +20,61 @@ public class Day3p1 {
     then i gotta add values 0-100 at key 100 then i gotta add value 100 at every key 0-100;
     
     */
-    private static dirToArray(ArrayList<String> directions) {
-        int cX, cY = 0; 
-        List<int> path = new ArrayList<>();
-        for (int i = 0; i < directions.size(); i++) {
-
-        } 
-    }
-   
     //convert string to an arraylist of strings
-    private static ArrayList<String> convert(String code) {
-        String[] sCode = code.split(",");
-        List<String> directions = new ArrayList<>();
+    private static List<Integer> convert(List<String> code) {
+        List<List<Integer>> keysList = new ArrayList<>();
+        List<Integer> cross = new ArrayList<>();
+        HashMap<Integer, Integer> grid = new HashMap<>();
         //convert string array to string arraylist
-        int cX, cY = 0; 
-		for (int i = 0; i < sCode.length; i++){
-            Char[] f = sCode.toCharArray();
-            String s; 
-            for (int j = 1;  j < sCode.length; j++) {
-                s = s + f[j];
+        for (int i = 0; i < code.size(); i++) {
+            List<Integer> dKeys = new ArrayList<>();
+            String[] sCode = code.get(i).split(",");
+            int cX = 0, cY = 0; 
+            for (int j = 0; j < sCode.length; j++) {
+                char[] f = sCode[i].toCharArray();
+                String first = "" + f[0];
+                String s =""; 
+                for (int k = 1;  k < sCode.length; k++) {
+                    s = s + f[k];
+                }
+                int distance = Integer.parseInt(s);
+                if (first == "U") {
+                    int travel = cY + 1 * distance; 
+                    dKeys.add(travel);
+                    for (int w = 0; w < travel; w++) {
+                        grid.put(w, cX);
+                    }
+                } else if (first == "D") {
+                    int travel = cY + -1 * distance;
+                    dKeys.add(travel);
+                    for (int w = 0; w < travel; w++) {
+                        grid.put(w, cX);
+                    }
+                } else if (first == "L") {
+                    int travel = cX + -1 * distance;
+                    for (int w = 0; w < travel; w++) {
+                        grid.put(cY, w);
+                    }
+                } else if (first == "R") {
+                    int travel = cX + 1 * distance;
+                    for (int w = 0; w < travel; w++) {0
+                        grid.put(cY, w);
+                    }
+                }
             }
-            int distance = Integer.parseInt(s);
-			if (sCode[i].charAt(0) == "U") {
-                cY = 1; 
-            } else if (sCode[i].charAt(0) == "D") {
-                cY = -1;
-            } else if (sCode[i].charAt(0) == "L") {
-                cX = -1;
-            } else if (sCode[i].charAt(0) == "R") {
-                cX = 1;
-            }
-            Integer.parseInt(sCode.split())
-
-		}
-		return directions;
+            keysList.add(dKeys);
+        }
+		return cross;
 	}
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws FileNotFoundException {
         List<String> dFile = new ArrayList<>();
         File input = new File("day3input.txt");
         Scanner sc = new Scanner(input);
         while(sc.hasNext()){
-           dFile.add(sc.nextLine();)
+           dFile.add(sc.nextLine());
         }
         sc.close();
-        for (String s : dFile) {
-            convert(s):
-        }
+        List<Integer> xSections = convert(dFile); 
     }
 }
