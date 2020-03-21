@@ -57,7 +57,7 @@ public class Day3p1 {
                     }
                 } else if (first == "R") {
                     int travel = cX + 1 * distance;
-                    for (int w = 0; w < travel; w++) {0
+                    for (int w = 0; w < travel; w++) {
                         grid.put(cY, w);
                     }
                 }
