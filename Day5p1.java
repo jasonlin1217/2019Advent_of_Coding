@@ -14,6 +14,10 @@ public class Day5p1 {
 				j = j + 3; 
             } else if (iCode[j] == 3) {
                 iCode[iCode[j+1]] = iCode[iCode[j+2]];
+                j = j + 3;
+            } else if (iCode[j] == 4) {
+                iCode[iCode[j+2]] = iCode[iCode[j+1]];
+                j = j + 3;
             } else if (iCode[j] == 99) {
 				return  iCode;
 			}
@@ -32,7 +36,7 @@ public class Day5p1 {
 	}
 
     public static void main(String[] args) throws FileNotFoundException {
-		File input = new File("day2input.txt");
+		File input = new File("day5input.txt");
 		Scanner sc = new Scanner(input);
 		String s = sc.nextLine();
 		sc.close();
